@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Configuration of venus-sector-manager | Damocles</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/assets/damocles-icon.png">
+    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-C1545RTPE5"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-C1545RTPE5');</script>
+    <meta name="description" content="Damocles, formerly known as Venus Power Service, is THE Filecoin storage power solution.">
+    
+    <link rel="preload" href="/assets/css/0.styles.e2ff4576.css" as="style"><link rel="preload" href="/assets/js/app.88e2a275.js" as="script"><link rel="preload" href="/assets/js/2.0e518e40.js" as="script"><link rel="preload" href="/assets/js/21.79383f37.js" as="script"><link rel="prefetch" href="/assets/js/10.f067a250.js"><link rel="prefetch" href="/assets/js/11.2a60a7f2.js"><link rel="prefetch" href="/assets/js/12.786a33d7.js"><link rel="prefetch" href="/assets/js/13.647f3f5f.js"><link rel="prefetch" href="/assets/js/14.d18468f6.js"><link rel="prefetch" href="/assets/js/15.b40303ec.js"><link rel="prefetch" href="/assets/js/16.f16af60c.js"><link rel="prefetch" href="/assets/js/17.7db729fe.js"><link rel="prefetch" href="/assets/js/18.0a794e3e.js"><link rel="prefetch" href="/assets/js/19.a72425ac.js"><link rel="prefetch" href="/assets/js/20.0b122dca.js"><link rel="prefetch" href="/assets/js/22.5da37b88.js"><link rel="prefetch" href="/assets/js/23.26fa7616.js"><link rel="prefetch" href="/assets/js/24.b6b1e3d2.js"><link rel="prefetch" href="/assets/js/25.96d8f023.js"><link rel="prefetch" href="/assets/js/26.e854b18e.js"><link rel="prefetch" href="/assets/js/27.4f7b5419.js"><link rel="prefetch" href="/assets/js/28.96a8742f.js"><link rel="prefetch" href="/assets/js/29.e1eeadd6.js"><link rel="prefetch" href="/assets/js/3.bd29e568.js"><link rel="prefetch" href="/assets/js/30.dcbb44a1.js"><link rel="prefetch" href="/assets/js/31.0f2dbca3.js"><link rel="prefetch" href="/assets/js/32.5a6e3ca9.js"><link rel="prefetch" href="/assets/js/33.02e1642a.js"><link rel="prefetch" href="/assets/js/34.4e07fbe5.js"><link rel="prefetch" href="/assets/js/35.49ab1f8e.js"><link rel="prefetch" href="/assets/js/4.06777882.js"><link rel="prefetch" href="/assets/js/5.d51f6b5b.js"><link rel="prefetch" href="/assets/js/6.bac82468.js"><link rel="prefetch" href="/assets/js/7.1e16573b.js"><link rel="prefetch" href="/assets/js/8.3f6feca0.js"><link rel="prefetch" href="/assets/js/9.5ce73d52.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e2ff4576.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/damocles-icon.png" alt="Damocles" class="logo"> <span class="site-name can-hide">Damocles</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/intro/" class="nav-link router-link-active">
+  Introduction
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/intro/venus-sector-manager-config.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/intro/venus-sector-manager-config.html" class="nav-link">
+  简体中文
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/intro/" class="nav-link router-link-active">
+  Introduction
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/intro/venus-sector-manager-config.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/intro/venus-sector-manager-config.html" class="nav-link">
+  简体中文
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Introduction</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/intro/" aria-current="page" class="sidebar-link">Overview</a></li><li><a href="/intro/architecture.html" class="sidebar-link">Architecture</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Deployment</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/intro/getting-started.html" class="sidebar-link">Getting started</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Configurations</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/intro/venus-sector-manager-config.html" aria-current="page" class="active sidebar-link">venus-sector-manager config</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/intro/venus-sector-manager-config.html#common" class="sidebar-link">[Common]</a></li><li class="sidebar-sub-header"><a href="/intro/venus-sector-manager-config.html#miners" class="sidebar-link">[[Miners]]</a></li><li class="sidebar-sub-header"><a href="/intro/venus-sector-manager-config.html#a-minimal-working-configuration-file-example" class="sidebar-link">A minimal working configuration file example</a></li></ul></li><li><a href="/intro/venus-worker-config.html" class="sidebar-link">venus-worker config</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Operations</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/intro/task-management.html" class="sidebar-link">Task management</a></li><li><a href="/intro/task-flow.html" class="sidebar-link">Task flow</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Migration</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/intro/migrate-sectors.html" class="sidebar-link">Import existing sectors</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Other Features</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/intro/other.html" class="sidebar-link">More features...</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="configuration-of-venus-sector-manager"><a href="#configuration-of-venus-sector-manager" class="header-anchor">#</a> Configuration of venus-sector-manager</h1> <p><code>venus-sector-manager</code> is the main component for interacting with the chain and maintaining the sectors. Let's take a look at its configuration file structure.</p> <p>After initialization, we can get a copy of the default configuration:</p> <div class="language- extra-class"><pre class="language-text"><code># Default config:
+[Common]
+[Common.API]
+#Chain = &quot;/ip4/{api_host}/tcp/{api_port}&quot;
+#Messager = &quot;/ip4/{api_host}/tcp/{api_port}&quot;
+#Market = &quot;/ip4/{api_host}/tcp/{api_port}&quot;
+#Gateway = [&quot;/ip4/{api_host}/tcp/{api_port}&quot;]
+#Token = &quot;{some token}&quot;
+#ChainEventInterval = &quot;1m0s&quot;
+#
+[[Common.PieceStores]]
+#Name = &quot;{store_name}&quot;
+#Path = &quot;{store_path}&quot;
+#Plugin = &quot;path/to/objstore-plugin&quot;
+[Common.PieceStores.Meta]
+#SomeKey = &quot;SomeValue&quot;
+#
+[[Common.PersistStores]]
+#Name = &quot;{store_name}&quot;
+#Path = &quot;{store_path}&quot;
+#Strict = false
+#ReadOnly = false
+#Weight = 0
+#Plugin = &quot;path/to/objstore-plugin&quot;
+#AllowMiners = [1, 2]
+#DenyMiners = [3, 4]
+[Common.PersistStores.Meta]
+#SomeKey = &quot;SomeValue&quot;
+[Common.MongoKVStore]
+#Enable = false
+#DSN = &quot;mongodb://127.0.0.1:27017/?directConnection=true&amp;serverSelectionTimeoutMS=2000&quot;
+#DatabaseName = &quot;test&quot;
+#
+[[Miners]]
+#Actor = 10086
+[Miners.Sector]
+#InitNumber = 0
+#MinNumber = 10
+#MaxNumber = 1000000
+#Enabled = true
+#EnableDeals = false
+#LifetimeDays = 540
+#Verbose = false
+[Miners.SnapUp]
+#Enabled = false
+#Sender = &quot;f1abjxfbp274xpdqcpuaykwkfb43omjotacm2p3za&quot;
+#SendFund = true
+#GasOverEstimation = 1.2
+#GasOverPremium = 0.0
+#GasFeeCap = &quot;5 nanoFIL&quot;
+#MaxFeeCap = &quot;&quot;
+#MessageConfidence = 15
+#ReleaseConfidence = 30
+[Miners.SnapUp.Retry]
+#MaxAttempts = 10
+#PollInterval = &quot;3m0s&quot;
+#APIFailureWait = &quot;3m0s&quot;
+#LocalFailureWait = &quot;3m0s&quot;
+[Miners.Commitment]
+#Confidence = 10
+[Miners.Commitment.Pre]
+#Sender = &quot;f1abjxfbp274xpdqcpuaykwkfb43omjotacm2p3za&quot;
+#SendFund = true
+#GasOverEstimation = 1.2
+#GasOverPremium = 0.0
+#GasFeeCap = &quot;5 nanoFIL&quot;
+#MaxFeeCap = &quot;&quot;
+[Miners.Commitment.Pre.Batch]
+#Enabled = false
+#Threshold = 16
+#MaxWait = &quot;1h0m0s&quot;
+#CheckInterval = &quot;1m0s&quot;
+#GasOverEstimation = 1.2
+#GasOverPremium = 0.0
+#GasFeeCap = &quot;5 nanoFIL&quot;
+#MaxFeeCap = &quot;&quot;
+[Miners.Commitment.Prove]
+#Sender = &quot;f1abjxfbp274xpdqcpuaykwkfb43omjotacm2p3za&quot;
+#SendFund = true
+#GasOverEstimation = 1.2
+#GasOverPremium = 0.0
+#GasFeeCap = &quot;5 nanoFIL&quot;
+#MaxFeeCap = &quot;&quot;
+[Miners.Commitment.Prove.Batch]
+#Enabled = false
+#Threshold = 16
+#MaxWait = &quot;1h0m0s&quot;
+#CheckInterval = &quot;1m0s&quot;
+#GasOverEstimation = 1.2
+#GasOverPremium = 0.0
+#GasFeeCap = &quot;5 nanoFIL&quot;
+#MaxFeeCap = &quot;&quot;
+[Miners.Commitment.Terminate]
+#Sender = &quot;f1abjxfbp274xpdqcpuaykwkfb43omjotacm2p3za&quot;
+#SendFund = true
+#GasOverEstimation = 1.2
+#GasOverPremium = 0.0
+#GasFeeCap = &quot;5 nanoFIL&quot;
+#MaxFeeCap = &quot;&quot;
+[Miners.Commitment.Terminate.Batch]
+#Enabled = false
+#Threshold = 5
+#MaxWait = &quot;1h0m0s&quot;
+#CheckInterval = &quot;1m0s&quot;
+#GasOverEstimation = 1.2
+#GasOverPremium = 0.0
+#GasFeeCap = &quot;5 nanoFIL&quot;
+#MaxFeeCap = &quot;&quot;
+[Miners.PoSt]
+#Sender = &quot;f1abjxfbp274xpdqcpuaykwkfb43omjotacm2p3za&quot;
+#Enabled = true
+#StrictCheck = true
+#Parallel = false
+#GasOverEstimation = 1.2
+#GasOverPremium = 0.0
+#GasFeeCap = &quot;5 nanoFIL&quot;
+#MaxFeeCap = &quot;&quot;
+#Confidence = 10
+#SubmitConfidence = 0
+#ChallengeConfidence = 0
+#MaxRecoverSectorLimit = 0
+#MaxPartitionsPerPoStMessage = 0
+#MaxPartitionsPerRecoveryMessage = 0
+[Miners.Proof]
+#Enabled = false
+[Miners.Sealing]
+#SealingEpochDuration = 0
+#
+</code></pre></div><p>We will break down each configurable item one by one.</p> <h2 id="common"><a href="#common" class="header-anchor">#</a> [Common]</h2> <p><code>Common</code> section includes common configuration, which is further divided into four sub-configuration items:</p> <h3 id="common-api"><a href="#common-api" class="header-anchor">#</a> [Common.API]</h3> <p><code>Common.API</code> is interface related configuration, its content includes:</p> <div class="language- extra-class"><pre class="language-text"><code>[Common.API]
+# Chain service info, required, string type
+# Fill in according to the actual situation of the service used
+# If the field is valid as a token-included-info-string (&quot;{token}:{multiaddr}&quot;), the token included would be used to construct the rpc client instead of the common token.
+Chain = &quot;/ip4/{api_host}/tcp/{api_port}&quot;
+
+# Message service info, required, string type
+# Fill in according to the actual situation of the service used
+# If the field is valid as a token-included-info-string (&quot;{token}:{multiaddr}&quot;), the token included would be used to construct the rpc client instead of the common token.
+Messager = &quot;/ip4/{api_host}/tcp/{api_port}&quot;
+
+# Market service info, required, string type
+# Fill in according to the actual situation of the service used
+# If the field is valid as a token-included-info-string (&quot;{token}:{multiaddr}&quot;), the token included would be used to construct the rpc client instead of the common token.
+Market = &quot;/ip4/{api_host}/tcp/{api_port}&quot;
+
+# Event gateway service infos, required, string type
+# Fill in according to the actual situation of the service used
+# For each one contained, if the item is valid as a token-included-info-string (&quot;{token}:{multiaddr}&quot;), the token included would be used to construct the rpc client instead of the common token.
+Gateway = [&quot;/ip4/{api_host}/tcp/{api_port}&quot;]
+
+# common token for services, required, string type
+# Fill in according to the actual situation of the service used
+Token = &quot;{some token}&quot;
+
+# Interval time for detecting chain height changes, optional, duration type
+# Default is 1min
+#ChainEventInterval = &quot;1m0s&quot;
+</code></pre></div><h3 id="common-piecestores"><a href="#common-piecestores" class="header-anchor">#</a> [[Common.PieceStores]]</h3> <p><code>Common.PieceStores</code> is used for configuring local deal <code>piece</code> data. When there is available offline deal, you can configure this item to avoid getting the deal <code>piece</code> data through public network traffic.</p> <p>Each local store directory should correspond to a <code>Common.PieceStores</code> configuration block.</p> <h4 id="basic-configuration-example"><a href="#basic-configuration-example" class="header-anchor">#</a> Basic configuration example</h4> <div class="language- extra-class"><pre class="language-text"><code>[[Common.PieceStores]]
+# name, optional, string type
+# The default is the absolute path corresponding to the path
+#Name = &quot;remote-store1&quot;
+
+# path, required, string type
+Path = &quot;/mnt/mass/piece1&quot;
+
+# Plugin path, optional, string type
+# default is null
+# If you would like to use a custom storage scheme, you can write a golang plugin that meets the requirements and set it here.
+#Plugin = &quot;path/to/objstore-plugin&quot;
+
+# Meta information, optional items, dictionary type
+# The internal value is in the format of Key = &quot;Value&quot;
+# Default value is null
+# Used to support different types of storage schemes
+[Common.PieceStores.Meta]
+#SomeKey = &quot;SomeValue&quot;
+#
+</code></pre></div><h3 id="common-persiststores"><a href="#common-persiststores" class="header-anchor">#</a> [[Common.PersistStores]]</h3> <p><code>Common.PersistStores</code> is used to configure sector persistent data stores. It corresponds to the <code>attached</code> concept in <code>venus-worker</code>.</p> <p>Similar to <code>Common.PieceStores</code>, each persistent store directory should correspond to a <code>Common.PersistStores</code> configuration block.</p> <h4 id="basic-configuration-example-2"><a href="#basic-configuration-example-2" class="header-anchor">#</a> Basic configuration example</h4> <div class="language- extra-class"><pre class="language-text"><code>[[Common.PersistStores]]
+# name, optional, string type
+## Default is the absolute path corresponding to the path
+#Name = &quot;remote-store1&quot;
+
+# path, required, string type
+# It is recommended to use absolute paths
+Path = &quot;/mnt/remote/10.0.0.14/store&quot;
+
+# read only, optional, boolean
+# Default is false
+# From v0.4.0 and above, the persistent storage allocation logic goes to vsmgr
+# This configuration can be used to set whether you can continue to write to the storage
+#ReadOnly = false
+
+# weight, optional, number type
+# Default is 1
+# When the filled value is 0, it is equivalent to 1
+# From v0.4.0 and above, the persistent storage allocation logic goes to vsmgr
+# This configuration can be used to set the weight allocation ratio between multiple persistent stores
+#Weight = 1
+
+# Plugin path, optional, string type
+# default is null
+# If you want to use a custom storage scheme, you can write a golang plugin that meets the requirements and set it here.
+#Plugin = &quot;path/to/objstore-plugin&quot;
+
+# List of miner IDs that are allowed, optional, numeric array type
+# default is null
+# When not set, it is regarded as allowing all miner IDs; when set, it is equivalent to a whitelist, which allows only listed miner IDs
+# If a miner ID appears in AllowMiners and DenyMiners at the same time, DenyMiners will take effect first, which is considered blacklisted
+#AllowMiners = [1, 2]
+
+# List of miner IDs that are being denied, optional, numeric array type
+# default is null
+# When not set, it is regarded as not rejecting any miner number; when set, it is equivalent to a blacklist, which will deny the listed miner ID
+# If a miner ID appears in both AllowMiners and DenyMiners, DenyMiners will take effect first, which is considered blacklisted
+#DenyMiners = [3, 4]
+
+# Meta information, optional items, dictionary type
+# The internal value is in the format of Key = &quot;Value&quot;
+# Default value is null
+# Used to support the preparation of different types of storage schemes, currently has no effect
+[Common.PersistStores.Meta]
+#SomeKey = &quot;SomeValue&quot;
+#
+</code></pre></div><h3 id="common-mongokvstore"><a href="#common-mongokvstore" class="header-anchor">#</a> [Common.MongoKVStore]</h3> <p><code>Common.MongoKVStore</code> is used to configure whether <code>venus-sector-manager</code> use MongoDB as KV store during sealing。</p> <h4 id="basic-configuration-example-3"><a href="#basic-configuration-example-3" class="header-anchor">#</a> Basic configuration example</h4> <div class="language- extra-class"><pre class="language-text"><code># Switch of Mongo KV, optional, boolean type
+# default is false 
+Enable = true
+# DSN of Mongo, when `Enable` is true, `DSN` is required, string type。
+DSN = &quot;mongodb://127.0.0.1:27017/?directConnection=true&amp;serverSelectionTimeoutMS=2000&quot;
+# DatabaseName of Mongo, when `Enable` is true, `DatabaseName` is required, string type。
+DatabaseName = &quot;test&quot;
+</code></pre></div><h2 id="miners"><a href="#miners" class="header-anchor">#</a> [[Miners]]</h2> <p><code>Miners</code> is an important configuration item, which is used to define behavior and policy for a certain <code>SP</code>.</p> <p><code>venus-cluster</code> is designed to support multiple <code>SP</code>s with the same set of components. This is reflected in <code>venus-sector-manager</code>, which you can set multiple <code>Miners</code> configuration blocks as needed.</p> <h3 id="main-configuration-item"><a href="#main-configuration-item" class="header-anchor">#</a> Main configuration item</h3> <div class="language- extra-class"><pre class="language-text"><code>[[Miners]]
+# `SP` actor id, required, numeric type
+Actor = 10086
+</code></pre></div><p>In addition to the main configuration, <code>Miners</code> also contains a number of different sub-configuration blocks, let's go through them one by one</p> <h3 id="miners-sector"><a href="#miners-sector" class="header-anchor">#</a> [Miners.Sector]</h3> <p>Policy used to control sector allocation.</p> <div class="language- extra-class"><pre class="language-text"><code>[Miners.Sector]
+# Sector start number, optional, number type
+# Default value is 0
+# Deprecated
+InitNumber = 0
+
+# Minimum sector number, optional, number type
+# Default value is null
+# Compared with InitNumber, when this is set,
+# 1. At any time, the allocator will not give a sector number less than or equal to this value.
+# 2. The value of this item can be adjusted during cluster operation.
+# Increase the config value, the assignment result will always follow the description of 1).
+# Lowering the config value usually has no effect.
+#
+# When this item is not set, if InitNumber is a non-zero value, it is equivalent to this item.
+#MinNumber = 10
+
+# Sector number upper limit, optional, number type
+# The default value is null, which means no upper limit
+#MaxNumber = 1000000
+
+# Whether to allow allocation of sectors, optional, boolean type
+# The default value is true, that is, the allocation is enabled
+#Enabled = true
+
+# Whether to allow allocation of deals, optional, boolean
+# Default is false
+#EnableDeals = false
+
+# The life cycle of the CC sector, the unit is days, optional, number type
+# Default is 540
+#LifetimeDays = 540
+
+# Sector log verbosity of related modules, optional items, boolean type
+# The default value is false, which simplifies the log output
+#Verbose = false
+</code></pre></div><h3 id="miners-snapup"><a href="#miners-snapup" class="header-anchor">#</a> [Miners.SnapUp]</h3> <p>Production strategy for controlling <code>SnapDeal</code></p> <div class="language- extra-class"><pre class="language-text"><code>[Miners.SnapUp]
+# Whether to enable, optional, boolean type
+# Default is false
+#Enabled = false
+
+# Sender address, required if enabled, address type
+#Sender = &quot;t1abjxfbp274xpdqcpuaykwkfb43omjotacm2p3za&quot;
+
+# Whether to send the necessary funds from Sender when submitting the on-chain message, optional, boolean type
+# Default value is true
+#SendFund = true
+
+# Gas estimate multiplier for a single commit message, optional, floating point type
+# Default is 1.2
+#GasOverEstimation = 1.2
+
+# Gas premium multiplier for a single commit message, optional, floating point type
+# Default is 0.0, which means no effect
+#GasOverPremium = 0.0
+
+# FeeCap limit for a single message, optional, FIL value type
+# Default is 5 nanoFIL
+#GasFeeCap = &quot;5 nanoFIL&quot;
+
+# Deprecated
+#MaxFeeCap = &quot;&quot;
+
+# The confident height for message on-chain, optional, number type
+# Default is 15
+#MessageConfidence = 15
+
+# The confident height to release old data storage space, optional, number type
+# Default is 30
+#ReleaseConfidence = 30
+
+# SnapUp retry policy
+[Miners.SnapUp.Retry]
+
+# maximum number of retries, optional, number type
+# The default is NULL, which means no limit
+#MaxAttempts = 10
+
+# Status polling interval, optional, duration type
+# Default is 3min
+#PollInterval = &quot;3m0s&quot;
+
+# API interface exception retry interval, optional, duration type
+# Default is 3min
+#APIFailureWait = &quot;3m0s&quot;
+
+# Retry interval for local exceptions, such as local database exceptions, local storage exceptions, etc., optional, duration type
+# Default is 3min
+#LocalFailureWait = &quot;3m0s&quot;
+</code></pre></div><h3 id="miners-commitment"><a href="#miners-commitment" class="header-anchor">#</a> [Miners.Commitment]</h3> <p>Common section for configuring PoRep message sending policies.</p> <div class="language- extra-class"><pre class="language-text"><code>[Miners.Commitment]
+# Height of the message that is considered stable, optional, number type
+# Default is 10
+#Confidence = 10
+</code></pre></div><h3 id="miners-commitment-pre"><a href="#miners-commitment-pre" class="header-anchor">#</a> [Miners.Commitment.Pre]</h3> <p>Strategy for configuring <code>PreCommit</code> message sending</p> <div class="language- extra-class"><pre class="language-text"><code>[Miners.Commitment.Pre]
+# Whether to use the necessary funds from Sender when sending the  message on-chain, optional, boolean type
+# Default value is true
+#SendFund = true
+
+# Sender address, required, address type
+Sender = &quot;t1abjxfbp274xpdqcpuaykwkfb43omjotacm2p3za&quot;
+
+# Gas estimate multiplier for a single message, optional, floating point type
+# Default is 1.2
+#GasOverEstimation = 1.2
+
+# Gas premium multiplier for a single commit message, optional, floating point type
+# Default is 0.0, which means no effect
+#GasOverPremium = 0.0
+
+# FeeCap limit for a single message, optional, FIL value type
+# Default is 5 nanoFIL
+#GasFeeCap = &quot;5 nanoFIL&quot;
+
+# Deprecated
+#MaxFeeCap = &quot;5 nanoFIL&quot;
+
+# Aggregate message sending configuration blocks
+[Miners.Commitment.Pre.Batch]
+# Whether to enable aggregate messages, optional, boolean type
+# The default value is false, i.e. not enabled
+#Enabled = false
+
+# Minimum number of message to aggregate, optional, number type
+# The default value is 16, that is, the minimum number of aggregates is 16
+#Threshold = 16
+
+# Maximum waiting time, optional, time type
+# The default value is 1h, that is, the maximum wait time is 1 hour
+#MaxWait = &quot;1h0m0s&quot;
+
+# Check interval, optional, time type
+# The default value is 1min, that is, every 1min to check whether the aggregation conditions are met
+#CheckInterval = &quot;1m0s&quot;
+
+# Gas estimation multiplier of aggregate messages, optional, floating point type
+# Default is 1.2
+#GasOverEstimation = 1.2
+
+# Gas premium multiplier for a single commit message, optional, floating point type
+# Default is 0.0, which means no effect
+#GasOverPremium = 0.0
+
+# FeeCap limit for a single message, optional, FIL value type
+# Default is 5 nanoFIL
+#GasFeeCap = &quot;5 nanoFIL&quot;
+
+# Deprecated
+#MaxFeeCap = &quot;5 nanoFIL&quot;
+</code></pre></div><h3 id="miners-commitment-prove"><a href="#miners-commitment-prove" class="header-anchor">#</a> [Miners.Commitment.Prove]</h3> <p>The strategy used to configure <code>ProveCommit</code> message sending, its configuration items and functions are exactly the same as those in <code>Miners.Commitment.Pre</code>.</p> <h3 id="miners-commitment-terminate"><a href="#miners-commitment-terminate" class="header-anchor">#</a> [Miners.Commitment.Terminate]</h3> <p>The strategy used to configure <code>TerminateSectors</code> message submission, its configuration items and functions are basically the same as those in <code>Miners.Commitment.Pre</code>. In practice, such messages are not sent as frequently. It is recommended to use single message sending mode. When using aggregate sending mode, <code>Threshold</code> is recommended to be configured with a smaller value to ensure that messages get on-chain in time.</p> <h3 id="miners-post"><a href="#miners-post" class="header-anchor">#</a> [Miners.PoSt]</h3> <p>Options for configuring <code>WindowPoSt</code>.</p> <div class="language- extra-class"><pre class="language-text"><code>[Miners.Post]
+# Sender address, required, address type
+Sender = &quot;t1abjxfbp274xpdqcpuaykwkfb43omjotacm2p3za&quot;
+
+# Whether to enable, optional, boolean type
+# Default value is true
+#Enabled = true
+
+# Whether to perform strong verification on sector files, optional, boolean type
+# Default value is true
+# When enabled, in addition to checking the existence of the file, it will also try to read some information, such as metadata, etc.
+#StrictCheck = true
+
+# Switch for enable parallel proofs generations, optional, boolean type
+# Default value is false
+# When enabled, we will start generating partitions inside one deadline parallelly
+# BE NOTICED: this can take effect only when multiple ext-provers are set
+#Parallel = false
+
+# Gas estimation multiplier of WindowPoSt message, optional, floating point type
+# Default is 1.2
+#GasOverEstimation = 1.2
+
+# Gas premium multiplier for a single commit message, optional, floating point type
+# Default is 0.0, which means no effect
+#GasOverPremium = 0.0
+
+# FeeCap limit for a single message, optional, FIL value type
+# Default is 5 nanoFIL
+#GasFeeCap = &quot;5 nanoFIL&quot;
+
+# Deprecated
+#MaxFeeCap = &quot;5 nanoFIL&quot;
+
+# Height of the message that is considered stable, optional, number type
+# Default is 10
+#Confidence = 10
+
+# Stable height to submit WindowPoSt proofs, optional, number type
+# This value determines how many epochs to wait for the chain to enter a stable state, so that we could start submiting proofs
+# The first epoch we can submit is deadline.Open + SubmitConfidence
+# The smaller this value is set, the earlier it will start, but at the same time, more likely to send windowPost to a fork
+# When set to 0, the default value of 4 will be used
+#SubmitConfidence = 0
+
+# Stable height to start WindowPoSt, optional, number type
+# This value determines how many epochs to wait for the chain to enter a stable state, and the WindowPoSt task can be started
+# The first epoch we can start is deadline.Challenge + ChallengeConfidence
+# The smaller this value is set, the earlier it will start, but at the same time, more likely to send windowPost to a fork
+# When set to 0, the default value of 10 will be used
+#ChallengeConfidence = 0
+
+# The maximum limit of the sectors included in one recovering check, optional, number type
+# Default value is 0
+# When set to 0, no limit
+#MaxRecoverSectorLimit = 0
+
+# The maximum number of Partitions allowed in a single PoSt message, optional, number type
+# Default value is 0
+# When set to 0, the default maximum value will be used
+#MaxPartitionsPerPoStMessage = 0
+
+# The maximum number of Partitions allowed in a single Recover message, optional, number type
+# Default value is 0
+# When set to 0, no limit
+#MaxPartitionsPerRecoveryMessage = 0
+</code></pre></div><h3 id="miners-proof"><a href="#miners-proof" class="header-anchor">#</a> [Miners.Proof]</h3> <p>Used to configure WinningPoSt Proof related policies</p> <div class="language- extra-class"><pre class="language-text"><code>[Miners.Proof]
+# Whether to enable, optional, boolean type
+# Default is false
+#Enabled = false
+</code></pre></div><h3 id="miners-sealing"><a href="#miners-sealing" class="header-anchor">#</a> [Miners.Sealing]</h3> <p>Used to configure sealing related policies</p> <div class="language- extra-class"><pre class="language-text"><code>[Miners.Sealing]
+# Sealing need how many epochs to achieve，when select deals in sealing, deals start epoch will be
+# required to later than current-epoch + sealing-duration ，optional，integer
+# Default is zero, means no config
+#SealingEpochDuration = 0
+#
+</code></pre></div><h3 id="miners-deal-deprecated"><a href="#miners-deal-deprecated" class="header-anchor">#</a> [Miners.Deal] <code>Deprecated</code></h3> <p>Used to configure deal related policies.</p> <div class="language- extra-class"><pre class="language-text"><code>[Miners.Deal]
+# Whether to enable, optional, boolean type
+# Default is false
+#Enabled = false
+</code></pre></div><h2 id="a-minimal-working-configuration-file-example"><a href="#a-minimal-working-configuration-file-example" class="header-anchor">#</a> A minimal working configuration file example</h2> <p>Let's have a look at an example of starting a <code>venus-sector-manager</code> that could supports a <code>SP</code>'s operation,</p> <div class="language- extra-class"><pre class="language-text"><code>[Common]
+[Common.API]
+Chain = &quot;/ip4/{api_host}/tcp/{api_port}&quot;
+Messager = &quot;/ip4/{api_host}/tcp/{api_port}&quot;
+Market = &quot;/ip4/{api_host}/tcp/{api_port}&quot;
+Gateway = [&quot;/ip4/{api_host}/tcp/{api_port}&quot;]
+Token = &quot;{some token}&quot;
+
+[[Common.PieceStores]]
+Path = &quot;{store_path}&quot;
+
+[[Common.PersistStores]]
+Name = &quot;{store_name1}&quot;
+Path = &quot;{store_path1}&quot;
+
+[[Common.PersistStores]]
+Name = &quot;{store_name2}&quot;
+Path = &quot;{store_path2}&quot;
+
+[[Common.PersistStores]]
+Name = &quot;{store_name3}&quot;
+Path = &quot;{store_path3}&quot;
+
+[[Common.PersistStores]]
+Name = &quot;{store_name4}&quot;
+Path = &quot;{store_path4}&quot;
+
+[[Miners]]
+Actor = 10086
+[Miners.Sector]
+InitNumber = 1000
+Enabled = true
+EnableDeals = true
+
+[Miners.Commitment]
+[Miners.Commitment.Pre]
+Sender = &quot;t1abjxfbp274xpdqcpuaykwkfb43omjotacm2p3za&quot;
+
+[Miners.Commitment.Pre.Batch]
+Enabled = false
+
+[Miners.Commitment.Prove]
+Sender = &quot;t1abjxfbp274xpdqcpuaykwkfb43omjotacm2p3za&quot;
+
+[Miners.Commitment.Prove.Batch]
+Enabled = true
+
+[Miners.Post]
+Sender = &quot;t1abjxfbp274xpdqcpuaykwkfb43omjotacm2p3za&quot;
+Enabled = true
+
+[Miners.Proof]
+Enabled = true
+
+</code></pre></div><p>This activates an instance of <code>venus-sector-manager</code> that...</p> <ul><li>With 1 local PieceStore</li> <li>With 4 local persistent stores</li> <li>Enables sector allocation, which initial number is 1000</li> <li>Disables aggregated PreCommit</li> <li>Enables aggregated ProveCommit</li> <li>Enables WinningPost module</li> <li>Enables deal</li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/ipfs-force-community/damocles-docs/edit/main/docs/intro/venus-sector-manager-config.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/intro/getting-started.html" class="prev">
+        Getting started
+      </a></span> <span class="next"><a href="/intro/venus-worker-config.html">
+        venus-worker config
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.88e2a275.js" defer></script><script src="/assets/js/2.0e518e40.js" defer></script><script src="/assets/js/21.79383f37.js" defer></script>
+  </body>
+</html>
