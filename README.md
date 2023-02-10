@@ -1,6 +1,6 @@
 # Damocles Docs
 
-This repository contains documentation content for the [Damocles]([[https://github.com/filecoin-project/venus](https://github.com/ipfs-force-community/venus-cluster](https://github.com/ipfs-force-community/venus-cluster). It is hosted at **[damocles.venus-fil.io](https://damocles.venus-fil.io)**. For mandarin speakers, please visit [https://damocles.venus-fil.io/zh/](https://damocles.venus-fil.io/zh/). 
+This repository contains documentation content for the [Damocles](https://github.com/ipfs-force-community/venus-cluster). It is hosted at **[damocles.venus-fil.io](https://damocles.venus-fil.io)**. For mandarin speakers, please visit [https://damocles.venus-fil.io/zh/](https://damocles.venus-fil.io/zh/). 
 
 ## Contributing
 
