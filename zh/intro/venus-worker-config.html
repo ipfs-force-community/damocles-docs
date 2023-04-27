@@ -13,7 +13,7 @@ gtag('js', new Date());
 gtag('config', 'G-C1545RTPE5');</script>
     <meta name="description" content="执剑人，原Venus算力服务，是一个Filecoin存储算力解决方案">
     
-    <link rel="preload" href="/assets/css/0.styles.e2ff4576.css" as="style"><link rel="preload" href="/assets/js/app.70d4f2d6.js" as="script"><link rel="preload" href="/assets/js/2.0e518e40.js" as="script"><link rel="preload" href="/assets/js/35.8348ea8a.js" as="script"><link rel="prefetch" href="/assets/js/10.f067a250.js"><link rel="prefetch" href="/assets/js/11.2a60a7f2.js"><link rel="prefetch" href="/assets/js/12.786a33d7.js"><link rel="prefetch" href="/assets/js/13.647f3f5f.js"><link rel="prefetch" href="/assets/js/14.d18468f6.js"><link rel="prefetch" href="/assets/js/15.b40303ec.js"><link rel="prefetch" href="/assets/js/16.4d27dd41.js"><link rel="prefetch" href="/assets/js/17.00f93025.js"><link rel="prefetch" href="/assets/js/18.0a794e3e.js"><link rel="prefetch" href="/assets/js/19.60debf2d.js"><link rel="prefetch" href="/assets/js/20.48390ea6.js"><link rel="prefetch" href="/assets/js/21.56f4fd34.js"><link rel="prefetch" href="/assets/js/22.61b41479.js"><link rel="prefetch" href="/assets/js/23.26fa7616.js"><link rel="prefetch" href="/assets/js/24.b6b1e3d2.js"><link rel="prefetch" href="/assets/js/25.96d8f023.js"><link rel="prefetch" href="/assets/js/26.e854b18e.js"><link rel="prefetch" href="/assets/js/27.4f7b5419.js"><link rel="prefetch" href="/assets/js/28.a426ecae.js"><link rel="prefetch" href="/assets/js/29.e1eeadd6.js"><link rel="prefetch" href="/assets/js/3.bd29e568.js"><link rel="prefetch" href="/assets/js/30.dcbb44a1.js"><link rel="prefetch" href="/assets/js/31.0f2dbca3.js"><link rel="prefetch" href="/assets/js/32.6a72d604.js"><link rel="prefetch" href="/assets/js/33.c072c019.js"><link rel="prefetch" href="/assets/js/34.6b5d576f.js"><link rel="prefetch" href="/assets/js/4.06777882.js"><link rel="prefetch" href="/assets/js/5.d51f6b5b.js"><link rel="prefetch" href="/assets/js/6.bac82468.js"><link rel="prefetch" href="/assets/js/7.1e16573b.js"><link rel="prefetch" href="/assets/js/8.3f6feca0.js"><link rel="prefetch" href="/assets/js/9.5ce73d52.js">
+    <link rel="preload" href="/assets/css/0.styles.e2ff4576.css" as="style"><link rel="preload" href="/assets/js/app.f82a296e.js" as="script"><link rel="preload" href="/assets/js/2.0e518e40.js" as="script"><link rel="preload" href="/assets/js/35.c1b33695.js" as="script"><link rel="prefetch" href="/assets/js/10.f067a250.js"><link rel="prefetch" href="/assets/js/11.2a60a7f2.js"><link rel="prefetch" href="/assets/js/12.786a33d7.js"><link rel="prefetch" href="/assets/js/13.647f3f5f.js"><link rel="prefetch" href="/assets/js/14.d18468f6.js"><link rel="prefetch" href="/assets/js/15.b40303ec.js"><link rel="prefetch" href="/assets/js/16.4d27dd41.js"><link rel="prefetch" href="/assets/js/17.00f93025.js"><link rel="prefetch" href="/assets/js/18.0a794e3e.js"><link rel="prefetch" href="/assets/js/19.60debf2d.js"><link rel="prefetch" href="/assets/js/20.48390ea6.js"><link rel="prefetch" href="/assets/js/21.56f4fd34.js"><link rel="prefetch" href="/assets/js/22.1317be15.js"><link rel="prefetch" href="/assets/js/23.26fa7616.js"><link rel="prefetch" href="/assets/js/24.b6b1e3d2.js"><link rel="prefetch" href="/assets/js/25.96d8f023.js"><link rel="prefetch" href="/assets/js/26.e854b18e.js"><link rel="prefetch" href="/assets/js/27.4f7b5419.js"><link rel="prefetch" href="/assets/js/28.a426ecae.js"><link rel="prefetch" href="/assets/js/29.e1eeadd6.js"><link rel="prefetch" href="/assets/js/3.bd29e568.js"><link rel="prefetch" href="/assets/js/30.dcbb44a1.js"><link rel="prefetch" href="/assets/js/31.0f2dbca3.js"><link rel="prefetch" href="/assets/js/32.6a72d604.js"><link rel="prefetch" href="/assets/js/33.c072c019.js"><link rel="prefetch" href="/assets/js/34.6b5d576f.js"><link rel="prefetch" href="/assets/js/4.06777882.js"><link rel="prefetch" href="/assets/js/5.d51f6b5b.js"><link rel="prefetch" href="/assets/js/6.bac82468.js"><link rel="prefetch" href="/assets/js/7.1e16573b.js"><link rel="prefetch" href="/assets/js/8.3f6feca0.js"><link rel="prefetch" href="/assets/js/9.5ce73d52.js">
     <link rel="stylesheet" href="/assets/css/0.styles.e2ff4576.css">
   </head>
   <body>
@@ -170,11 +170,11 @@ gtag('config', 'G-C1545RTPE5');</script>
 # 默认为 17890
 # rpc_server.port = 17891
 
-# 本地 piece 文件目录, 选填项, 字符串类型
+# 本地 piece 文件目录, 选填项, 字符串数组类型
 # 如果设置了此项, worker 会从设置的目录中加载 piece 文件
 # 否则将会从 VSM 加载远程 piece 文件
-# 如果 &quot;/path/to/your_local_pieces_dir/piece_file_name&quot; 文件不存在, worker 也会从 VSM 加载
-# local_pieces_dir = &quot;/path/to/your_local_pieces_dir&quot;
+# 如果 &quot;/path/to/{your_local_pieces_dir01, your_local_pieces_dir02, ...}/piece_file_name&quot; 文件不存在, worker 也会从 VSM 加载
+# local_pieces_dirs = [&quot;/path/to/your_local_pieces_dir01&quot;, &quot;/path/to/your_local_pieces_dir02&quot;]
 </code></pre></div><p>绝大多数情况下，本配置项内的各个字段无需手工配置。</p> <p>仅在一些特殊情况，诸如：</p> <ul><li>希望按照自己的编排习惯命名每个 <code>venus-worker</code> 实例</li> <li>不希望监听所有网卡IP，仅允许本地的 rpc 请求</li> <li>一台机器上部署了多个 <code>venus-worker</code>，为避免端口冲突，需要进行区分</li> <li><code>venus-worker</code> 可以直接访问 piece_store 目录，可配置 <code>local_pieces_dir</code> 从本地加载 piece 文件</li></ul> <p>等场景，需要按需手动配置这里的选项。</p> <h2 id="metrics"><a href="#metrics" class="header-anchor">#</a> [metrics]</h2> <p><code>metrics</code> 提供了监控指标(prometheus)相关的选项。</p> <h3 id="基础配置范例-2"><a href="#基础配置范例-2" class="header-anchor">#</a> 基础配置范例</h3> <div class="language-toml extra-class"><pre class="language-toml"><code><span class="token punctuation">[</span><span class="token table class-name">metrics</span><span class="token punctuation">]</span>
 <span class="token comment"># 是否启用 prometheus exporter, 选填项，布尔类型</span>
 <span class="token comment"># 默认值为 false</span>
@@ -667,6 +667,6 @@ cgroup.cpuset = &quot;40-45&quot;
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"><!----></div></div>
-    <script src="/assets/js/app.70d4f2d6.js" defer></script><script src="/assets/js/2.0e518e40.js" defer></script><script src="/assets/js/35.8348ea8a.js" defer></script>
+    <script src="/assets/js/app.f82a296e.js" defer></script><script src="/assets/js/2.0e518e40.js" defer></script><script src="/assets/js/35.c1b33695.js" defer></script>
   </body>
 </html>
