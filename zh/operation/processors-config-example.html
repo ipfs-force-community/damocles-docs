@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>venus-worker外部执行器的配置范例 | 执剑人</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/assets/damocles-icon.png">
+    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-C1545RTPE5"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-C1545RTPE5');</script>
+    <meta name="description" content="执剑人，原Venus算力服务，是一个Filecoin存储算力解决方案">
+    
+    <link rel="preload" href="/assets/css/0.styles.e2ff4576.css" as="style"><link rel="preload" href="/assets/js/app.00af1478.js" as="script"><link rel="preload" href="/assets/js/2.0e518e40.js" as="script"><link rel="preload" href="/assets/js/41.d4d40f28.js" as="script"><link rel="prefetch" href="/assets/js/10.f067a250.js"><link rel="prefetch" href="/assets/js/11.2a60a7f2.js"><link rel="prefetch" href="/assets/js/12.786a33d7.js"><link rel="prefetch" href="/assets/js/13.647f3f5f.js"><link rel="prefetch" href="/assets/js/14.d18468f6.js"><link rel="prefetch" href="/assets/js/15.b40303ec.js"><link rel="prefetch" href="/assets/js/16.4d27dd41.js"><link rel="prefetch" href="/assets/js/17.00f93025.js"><link rel="prefetch" href="/assets/js/18.0a794e3e.js"><link rel="prefetch" href="/assets/js/19.60debf2d.js"><link rel="prefetch" href="/assets/js/20.48390ea6.js"><link rel="prefetch" href="/assets/js/21.723f4efe.js"><link rel="prefetch" href="/assets/js/22.1317be15.js"><link rel="prefetch" href="/assets/js/23.26fa7616.js"><link rel="prefetch" href="/assets/js/24.b6b1e3d2.js"><link rel="prefetch" href="/assets/js/25.96d8f023.js"><link rel="prefetch" href="/assets/js/26.4cb944d1.js"><link rel="prefetch" href="/assets/js/27.95676902.js"><link rel="prefetch" href="/assets/js/28.0876f765.js"><link rel="prefetch" href="/assets/js/29.1ab385ca.js"><link rel="prefetch" href="/assets/js/3.4a8d8b7c.js"><link rel="prefetch" href="/assets/js/30.fd1d8a99.js"><link rel="prefetch" href="/assets/js/31.4fc18d11.js"><link rel="prefetch" href="/assets/js/32.89341849.js"><link rel="prefetch" href="/assets/js/33.b15e582d.js"><link rel="prefetch" href="/assets/js/34.224845b2.js"><link rel="prefetch" href="/assets/js/35.076a58ff.js"><link rel="prefetch" href="/assets/js/36.7c8e9d86.js"><link rel="prefetch" href="/assets/js/37.d2c6fd0b.js"><link rel="prefetch" href="/assets/js/38.cd722b7b.js"><link rel="prefetch" href="/assets/js/39.954c0d75.js"><link rel="prefetch" href="/assets/js/4.06777882.js"><link rel="prefetch" href="/assets/js/40.1286cbb2.js"><link rel="prefetch" href="/assets/js/42.515ada8a.js"><link rel="prefetch" href="/assets/js/43.97566b27.js"><link rel="prefetch" href="/assets/js/44.10ce806f.js"><link rel="prefetch" href="/assets/js/45.80d6c3e1.js"><link rel="prefetch" href="/assets/js/46.86c85c59.js"><link rel="prefetch" href="/assets/js/47.bbaad56d.js"><link rel="prefetch" href="/assets/js/48.8ae55825.js"><link rel="prefetch" href="/assets/js/5.d51f6b5b.js"><link rel="prefetch" href="/assets/js/6.bac82468.js"><link rel="prefetch" href="/assets/js/7.1e16573b.js"><link rel="prefetch" href="/assets/js/8.3f6feca0.js"><link rel="prefetch" href="/assets/js/9.77aa913f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e2ff4576.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/zh/" class="home-link router-link-active"><img src="/assets/damocles-icon.png" alt="执剑人" class="logo"> <span class="site-name can-hide">执剑人</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/zh/intro/" class="nav-link">
+  功能介绍
+</a></div><div class="nav-item"><a href="/zh/operation/" class="nav-link router-link-active">
+  部署/运维
+</a></div><div class="nav-item"><a href="/zh/developer/" class="nav-link">
+  研发/设计
+</a></div><div class="nav-item"><a href="/zh/about/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/operation/processors-config-example.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/zh/intro/" class="nav-link">
+  功能介绍
+</a></div><div class="nav-item"><a href="/zh/operation/" class="nav-link router-link-active">
+  部署/运维
+</a></div><div class="nav-item"><a href="/zh/developer/" class="nav-link">
+  研发/设计
+</a></div><div class="nav-item"><a href="/zh/about/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/operation/processors-config-example.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>部署</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/operation/getting-started.html" class="sidebar-link">快速上手</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>配置</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/operation/venus-sector-manager-config.html" class="sidebar-link">venus-sector-manager 配置</a></li><li><a href="/zh/operation/venus-worker-config.html" class="sidebar-link">venus-worker 配置</a></li><li><a href="/zh/operation/processors-config-example.html" aria-current="page" class="active sidebar-link">外部执行器配置范例</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/zh/operation/processors-config-example.html#实例分析" class="sidebar-link">实例分析</a></li><li class="sidebar-sub-header"><a href="/zh/operation/processors-config-example.html#总结" class="sidebar-link">总结</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>运维</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/operation/task-management.html" class="sidebar-link">worker 任务管理</a></li><li><a href="/zh/operation/task-flow.html" class="sidebar-link">任务状态流转</a></li><li><a href="/zh/operation/poster.html" class="sidebar-link">独立 Poster</a></li><li><a href="/zh/operation/snapup.html" class="sidebar-link">snapdeal 支持</a></li><li><a href="/zh/operation/worker-util.html" class="sidebar-link">venus-worker-util</a></li><li><a href="/zh/operation/custom-algo.html" class="sidebar-link">自定义算法/存储方案</a></li><li><a href="/zh/operation/metrics.html" class="sidebar-link">damocles-manager metrics 使用</a></li><li><a href="/zh/operation/hugeTLB.html" class="sidebar-link">PC1 hugeTLB 支持</a></li><li><a href="/zh/operation/sector-rebuild.html" class="sidebar-link">扇区重建支持</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>迁移</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/operation/migrate-sectors.html" class="sidebar-link">导入已有扇区</a></li><li><a href="/zh/operation/migrate-miner.html" class="sidebar-link">lotus-miner 与 damocles 切换流程</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>FAQ</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/operation/faq.html" class="sidebar-link">常见问题</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="venus-worker外部执行器的配置范例"><a href="#venus-worker外部执行器的配置范例" class="header-anchor">#</a> venus-worker外部执行器的配置范例</h1> <p>在其他文档中，我们介绍了 <code>processor</code> 的基本概念，也分析了 <code>venus-worker</code> 中关于 <code>processor</code> 的配置项。
+接下来，我们以一个实际场景为例，来看看具体如何编排外部处理器。</p> <h2 id="实例分析"><a href="#实例分析" class="header-anchor">#</a> 实例分析</h2> <h3 id="硬件配置"><a href="#硬件配置" class="header-anchor">#</a> 硬件配置</h3> <p>我们针对的配置为：</p> <ul><li>双路 <code>AMD EPYC 7642 48-Core Processor</code></li> <li>2T 内存</li> <li><code>GeForce RTX 3080</code> x 2</li> <li>足量的本地 NVME 数据盘</li></ul> <p>这样，我们可使用的计算资源约为：</p> <ul><li>96个CPU物理核，以 3c/DIE 计，共 32 个可用的 pc1 multicore 组</li> <li>约 1.96TiB 可用物理内存</li> <li>2块 <code>GeForce RTX 3080</code> GPU</li></ul> <h3 id="配比方案"><a href="#配比方案" class="header-anchor">#</a> 配比方案</h3> <p>考虑 32GiB CC 扇区的封装，我们存在两种可能的配比方案，以下分别阐述。
+<strong>注意</strong>：以下的设计可以作为方案参考，但不宜直接用于生产环境。
+使用者需要根据实际情况，以及试验阶段的产量情况进行调整。</p> <h4 id="方案-a-28-pc1-1-pc2-1-c2-pc2-与-c2-各组独占gpu"><a href="#方案-a-28-pc1-1-pc2-1-c2-pc2-与-c2-各组独占gpu" class="header-anchor">#</a> 方案 A: 28 pc1，1 pc2, 1 c2，pc2 与 c2 各组独占GPU</h4> <p>这种方案的思路，是在满足消费能力的前提下，共用各一个的独立 pc2、c2 外部执行器。
+其 <code>processors</code> 部分的配置如下：</p> <div class="language- extra-class"><pre class="language-text"><code>[processors.limitation.concurrent]
+pc1 = 28
+pc2 = 1
+c2 = 1
+
+[[processors.pc1]]
+numa_preferred = 0
+cgroup.cpuset = &quot;0-41&quot;
+concurrent = 14
+envs = { FIL_PROOFS_MAXIMIZE_CACHING=&quot;1&quot;, FIL_PROOFS_USE_MULTICORE_SDR = &quot;1&quot;, FIL_PROOFS_MULTICORE_SDR_PRODUCERS = &quot;1&quot; }
+
+[[processors.pc1]]
+numa_preferred = 1
+cgroup.cpuset = &quot;48-89&quot;
+concurrent = 14
+envs = { FIL_PROOFS_MAXIMIZE_CACHING=&quot;1&quot;, FIL_PROOFS_USE_MULTICORE_SDR = &quot;1&quot;, FIL_PROOFS_MULTICORE_SDR_PRODUCERS = &quot;1&quot; }
+
+[[processors.pc2]]
+cgroup.cpuset =  &quot;2,5,8,11,50,53,56,59&quot;
+envs = { FIL_PROOFS_USE_GPU_COLUMN_BUILDER = &quot;1&quot;, FIL_PROOFS_USE_GPU_TREE_BUILDER = &quot;1&quot;, CUDA_VISIBLE_DEVICES = &quot;0&quot; }
+
+[[processors.c2]]
+cgroup.cpuset =  &quot;14,17,20,23,26,29,32,35,42-47,62,65,68,71,74,77,80,83,90-95&quot;
+envs = { CUDA_VISIBLE_DEVICES = &quot;1&quot; }
+</code></pre></div><p>在此配置下，共启动 2 个外部 <code>pc1</code> 执行器，1 个外部 <code>pc2</code> 执行器，1 个外部 <code>c2</code> 执行器：</p> <ul><li>1 个 <code>pc1</code> 外部处理器，指定内存亲和 numa 0 区，使用 1 个主核 + 1 个 Producer 核的配置，分配位于 numa 0 区的 CPU核 <code>0-41</code>；</li> <li>1 个 <code>pc1</code> 外部处理器，指定内存亲和 numa 1 区，使用 1 个主核 + 1 个 Producer 核的配置，分配位于 numa 1 区的 CPU核 <code>48-89</code>；</li> <li>1 个 <code>pc2</code> 外部处理器，使用 CPU 核 <code>2,5,8,11,50,53,56,59</code>，指定可见序号为 0 的 GPU；
+这种方法可行的原因是在当前的 <code>pc1</code> 配置下，每个 DIE 会空出一个核，可以用来执行轻量的计算任务。而 <code>pc2</code> 在使用 GPU 的情况下，CPU 基本只用于数据搬运；</li> <li>1 个 <code>c2</code> 外部处理器，使用 CPU 核 <code>14,17,20,23,26,29,32,35,42-47,62,65,68,71,74,77,80,83,90-95</code>，指定可见序号为 1 的 GPU；</li> <li>空余 CPU 核 <code>38,41,86,89</code>，可以用于其他轻量任务，如运维管理等。</li></ul> <p>这种方案的优势是，<code>pc2</code> 和 <code>c2</code> 都各自独占资源，不会出现调度上的问题。</p> <h4 id="方案-b-28-pc1-2-pc2-2-c2-每个-pc2-与-一个-c2-形成一组-每组占用-1-gpu-组内不同阶段的任务形成竞争关系"><a href="#方案-b-28-pc1-2-pc2-2-c2-每个-pc2-与-一个-c2-形成一组-每组占用-1-gpu-组内不同阶段的任务形成竞争关系" class="header-anchor">#</a> 方案 B: 28 pc1，2 pc2, 2 c2，每个 pc2 与 一个 c2 形成一组，每组占用 1 GPU，组内不同阶段的任务形成竞争关系</h4> <p>这种方案的思路，实际上是将双路的硬件配置视作2组单路硬件的组合，对于每一个单路组执行一样的配置策略。
+其 <code>processors</code> 部分的配置如下：</p> <div class="language- extra-class"><pre class="language-text"><code>
+[processors.limitation.concurrent]
+pc1 = 28
+pc2 = 2
+c2 = 2
+
+[processors.ext_locks]
+gpu1 = 1
+gpu2 = 1
+
+[[processors.pc1]]
+numa_preferred = 0
+cgroup.cpuset = &quot;0-41&quot;
+concurrent = 14
+envs = { FIL_PROOFS_MAXIMIZE_CACHING=&quot;1&quot;, FIL_PROOFS_USE_MULTICORE_SDR = &quot;1&quot;, FIL_PROOFS_MULTICORE_SDR_PRODUCERS = &quot;1&quot; }
+
+[[processors.pc1]]
+numa_preferred = 1
+cgroup.cpuset = &quot;48-89&quot;
+concurrent = 14
+envs = { FIL_PROOFS_MAXIMIZE_CACHING=&quot;1&quot;, FIL_PROOFS_USE_MULTICORE_SDR = &quot;1&quot;, FIL_PROOFS_MULTICORE_SDR_PRODUCERS = &quot;1&quot; }
+
+[[processors.pc2]]
+cgroup.cpuset =  &quot;2,5,8,11,14,17,20,23&quot;
+locks = [&quot;gpu1&quot;]
+envs = { FIL_PROOFS_USE_GPU_COLUMN_BUILDER = &quot;1&quot;, FIL_PROOFS_USE_GPU_TREE_BUILDER = &quot;1&quot;, CUDA_VISIBLE_DEVICES = &quot;0&quot; }
+
+[[processors.pc2]]
+cgroup.cpuset =  &quot;50,53,56,59,62,65,68,71&quot;
+locks = [&quot;gpu2&quot;]
+envs = { FIL_PROOFS_USE_GPU_COLUMN_BUILDER = &quot;1&quot;, FIL_PROOFS_USE_GPU_TREE_BUILDER = &quot;1&quot;, CUDA_VISIBLE_DEVICES = &quot;1&quot; }
+
+[[processors.c2]]
+cgroup.cpuset =  &quot;2,5,8,11,14,17,20,23,26,29,32,35,42-47&quot;
+locks = [&quot;gpu1&quot;]
+envs = { CUDA_VISIBLE_DEVICES = &quot;0&quot; }
+
+[[processors.c2]]
+cgroup.cpuset =  &quot;50,53,56,59,62,65,68,71,74,77,80,83,90-95&quot;
+locks = [&quot;gpu2&quot;]
+envs = { CUDA_VISIBLE_DEVICES = &quot;1&quot; }
+</code></pre></div><p>在此配置下，共启动 2 个外部 pc1 执行器，2 个外部 pc2 执行器，2 个外部 c2 执行器：</p> <ul><li>1 个 <code>pc1</code> 外部处理器，指定内存亲和 numa 0 区，使用 1 个主核 + 1 个 Producer 核的配置，分配位于 numa 0 区的 CPU核 <code>0-41</code>；</li> <li>1 个 <code>pc1</code> 外部处理器，指定内存亲和 numa 1 区，使用 1 个主核 + 1 个 Producer 核的配置，分配位于 numa 1 区的 CPU核 <code>48-89</code>；</li> <li>1 个 <code>pc2</code> 与 1 个 <code>c2</code> 围绕自定义控制锁 <code>gpu1</code> 形成竞争关系，继而形成一个组，其中：
+<ul><li>1 个 <code>pc2</code>，使用 CPU 核 <code>2,5,8,11,14,17,20,23</code>, 指定可见序号为 0 的 GPU；</li> <li>1 个 <code>c2</code>， 使用 CPU 核 <code>2,5,8,11,14,17,20,23,26,29,32,35,42-47</code>，指定可见序号为 0 的 GPU；
+可以这样做的原因是，受限于自定义控制锁，本组内的 <code>pc2</code> 和 <code>c2</code> 处理器不会同时执行任务，因而可以共用部分 CPU 和 GPU 资源；</li></ul></li> <li>1 个 <code>pc2</code> 与 1 个 <code>c2</code> 围绕自定义控制锁 <code>gpu2</code> 形成竞争关系，继而形成一个组，其中：
+<ul><li>1 个 <code>pc2</code>，使用 CPU 核 <code>50,53,56,59,62,65,68,71</code>, 指定可见序号为 1 的 GPU；</li> <li>1 个 <code>c2</code>， 使用 CPU 核 <code>50,53,56,59,62,65,68,71,74,77,80,83,90-95</code>，指定可见序号为 1 的 GPU；</li></ul></li> <li>空余 CPU 核 <code>38,41,86,89</code>，可以用于其他轻量任务，如运维管理等。</li></ul> <p>相比方案 A，本方案可能存在一种极端情况：即控制锁始终被一种任务持续持有，而导致另一种任务长时间无法执行任务，导致扇区消费不通畅。
+用通俗的话来说，可以类比为：GPU 长时间被用于执行 <code>pc2</code>，无法释放给 <code>c2</code>， 导致等待 <code>c2</code> 资源的扇区堆积。</p> <h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>本文档提供的，是 <em>如何设计一个适合自身的配比方案</em>，而非 <em>一套适用一切场景的配比方案</em>。
+后续我们希望能提供更多的自动配置工具、计算器来简化使用者设计方案的过程，但同时，仍然建议使用者对方案中的关键环节有基本的理解。</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/ipfs-force-community/damocles-docs/edit/main/docs/zh/operation/processors-config-example.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/zh/operation/venus-worker-config.html" class="prev">
+        venus-worker 配置
+      </a></span> <span class="next"><a href="/zh/operation/task-management.html">
+        worker 任务管理
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.00af1478.js" defer></script><script src="/assets/js/2.0e518e40.js" defer></script><script src="/assets/js/41.d4d40f28.js" defer></script>
+  </body>
+</html>
