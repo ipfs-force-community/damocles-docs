@@ -180,7 +180,7 @@ module.exports = {
                         title: '部署',
                         collapsable: false,
                         children: [
-                            ['README.md', '快速上手'],
+                            ['', '快速上手'],
                         ]
                     },
                     {
@@ -228,7 +228,7 @@ module.exports = {
                         title: '设计理念',
                         collapsable: false,
                         children: [
-                            ['README.md', '简述'],
+                            ['', '简述'],
                             ['concept.md', '概念和基础设施', "https://github.com/ipfs-force-community/venus-cluster/blob/main/docs/zh/02.%E6%A6%82%E5%BF%B5%E5%92%8C%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD.md"],
                         ]
                     },
