@@ -180,7 +180,7 @@ module.exports = {
                         title: '部署',
                         collapsable: false,
                         children: [
-                            ['getting-started.md', '快速上手', "https://github.com/ipfs-force-community/venus-cluster/blob/main/docs/zh/05.%E5%BF%AB%E9%80%9F%E5%90%AF%E7%94%A8.md"],
+                            ['README.md', '快速上手', "https://github.com/ipfs-force-community/venus-cluster/blob/main/docs/zh/05.%E5%BF%AB%E9%80%9F%E5%90%AF%E7%94%A8.md"],
                         ]
                     },
                     {
@@ -228,7 +228,7 @@ module.exports = {
                         title: '设计理念',
                         collapsable: false,
                         children: [
-                            ['design-overview.md', '简述', "https://github.com/ipfs-force-community/venus-cluster/blob/main/docs/zh/01.%E7%AE%80%E8%BF%B0.md"],
+                            ['README.md', '简述', "https://github.com/ipfs-force-community/venus-cluster/blob/main/docs/zh/01.%E7%AE%80%E8%BF%B0.md"],
                             ['concept.md', '概念和基础设施', "https://github.com/ipfs-force-community/venus-cluster/blob/main/docs/zh/02.%E6%A6%82%E5%BF%B5%E5%92%8C%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD.md"],
                         ]
                     },
