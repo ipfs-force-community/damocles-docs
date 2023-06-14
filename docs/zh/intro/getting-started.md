@@ -89,7 +89,7 @@
    ```
 
 :::warning
-建议参看[Poster分离文档](poster.md)分别将计算`windowPost`和`winningPost`的进程启动在各自进程专用的机器上。如果想让`secotr-manager`运行所有`Post`计算，可以这样启动`sector-manager`:
+建议参看[Poster 分离文档](poster.md)分别将计算`windowPost`和`winningPost`的进程启动在各自进程专用的机器上。如果想让`secotr-manager`运行所有`Post`计算，可以这样启动`sector-manager`:
 ```bash
 $ ./dist/bin/venus-sector-manager daemon run --miner --poster
 ```
@@ -113,7 +113,7 @@ $ ./dist/bin/venus-sector-manager daemon run --miner --poster
 
    命令初始化数据目录。
 
-3. 规划用于各阶段的CPU核、numa 区域等配置。
+3. 规划用于各阶段的 CPU 核、numa 区域等配置。
 
    按需完成配置文件。
 
