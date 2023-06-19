@@ -81,6 +81,10 @@ module.exports = {
                     link: '/intro/'
                 },
                 {
+                    text: 'Deployment & Operation',
+                    link: '/operation/'
+                },
+                {
                     text: 'About',
                     link: '/about/'
                 },
@@ -94,41 +98,38 @@ module.exports = {
                             ['architecture.md', 'Architecture'],
                         ]
                     },
+                    ],
+                    '/operation/': [
                     {
                         title: 'Deployment',
                         collapsable: false,
                         children: [
-                            ['getting-started.md', 'Getting started'],
+                            ['', 'Getting started'],
                         ]
                     },
                     {
                         title: 'Configurations',
                         collapsable: false,
                         children: [
-                            ['venus-sector-manager-config.md', 'venus-sector-manager config', 'https://github.com/ipfs-force-community/venus-cluster/blob/main/docs/en/04.venus-sector-manager-config.md'],
-                            ['venus-worker-config.md', 'venus-worker config', 'https://github.com/ipfs-force-community/venus-cluster/blob/main/docs/en/03.venus-worker-config.md'],
+                            ['venus-sector-manager-config.md', 'damocles-manager config', 'https://github.com/ipfs-force-community/damocles/blob/main/docs/en/04.damocles-manager-config.md'],
+                            ['venus-worker-config.md', 'damocles-worker config', 'https://github.com/ipfs-force-community/damocles/blob/main/docs/en/03.damocles-worker-config.md'],
                         ]
                     },
                     {
                         title: 'Operations',
                         collapsable: false,
                         children: [
-                            ['task-management.md', 'Task management', 'https://github.com/ipfs-force-community/venus-cluster/blob/main/docs/en/10.venus-worker-task-management.md'],
-                            ['task-flow.md', 'Task flow', 'https://github.com/ipfs-force-community/venus-cluster/blob/main/docs/en/11.task-status-flow.md'],
+                            ['task-management.md', 'Task management', 'https://github.com/ipfs-force-community/damocles/blob/main/docs/en/10.damocles-worker-task-management.md'],
+                            ['task-flow.md', 'Task flow', 'https://github.com/ipfs-force-community/damocles/blob/main/docs/en/11.task-status-flow.md'],
+                            ['poster.md', 'Dedicated PoSt node', 'https://github.com/ipfs-force-community/damocles/blob/main/docs/en/09.poster-node.md'],
+                            ['worker-util.md', 'Worker utils', 'https://github.com/ipfs-force-community/damocles/blob/main/docs/en/12.damocles-worker-util.md'],
                         ]
                     },
                     {
                         title: 'Migration',
                         collapsable: false,
                         children: [
-                            ['migrate-sectors.md', 'Import existing sectors', 'https://github.com/ipfs-force-community/venus-cluster/blob/main/docs/en/06.migrate-sectors-to-venus.md'],
-                        ]
-                    },
-                    {
-                        title: 'Other Features',
-                        collapsable: false,
-                        children: [
-                            ['other.md', 'More features...'],
+                            ['migrate-sectors.md', 'Import existing sectors', 'https://github.com/ipfs-force-community/damocles/blob/main/docs/en/06.migrate-sectors-to-damocles.md'],
                         ]
                     },
                     ],
