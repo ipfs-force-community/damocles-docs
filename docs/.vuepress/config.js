@@ -206,6 +206,7 @@ module.exports = {
                             ['metrics.md', 'damocles-manager metrics 使用', "https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/14.damocles-manager%E7%9A%84mertics%E4%BD%BF%E7%94%A8.md"],
                             ['hugeTLB.md', 'PC1 hugeTLB 支持', "https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/15.damocles-worker_PC1_HugeTLB_Pages_%E6%94%AF%E6%8C%81.md"],
                             ['sector-rebuild.md', '扇区重建支持', "https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/16.%E6%89%87%E5%8C%BA%E9%87%8D%E5%BB%BA%E7%9A%84%E6%94%AF%E6%8C%81.md"],
+                            ['unseal.md', 'unseal 反封装', "https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/18.Unseal%E4%BB%BB%E5%8A%A1%E7%9A%84%E6%94%AF%E6%8C%81.md"],
                         ]
                     },
                     {
