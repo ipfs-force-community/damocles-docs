@@ -181,7 +181,7 @@ module.exports = {
                         title: '部署',
                         collapsable: false,
                         children: [
-                            ['', '快速上手','https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/05.%E5%BF%AB%E9%80%9F%E5%90%AF%E7%94%A8.md'],
+                            ['quick-start.md', '快速上手','https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/05.%E5%BF%AB%E9%80%9F%E5%90%AF%E7%94%A8.md'],
                         ]
                     },
                     {
