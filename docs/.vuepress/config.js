@@ -5,7 +5,6 @@ module.exports = {
     markdown: {
         extendMarkdown: md => {
             md.use(require('markdown-it-replace-link'), {
-                processHTML: true, // defaults to false for backwards compatibility
                 replaceLink: function (link, env, token, htmlToken) {
                     if (link === encodeURIComponent('./04.damocles-manager的配置解析.md')) {
                         return 'damocles-manager-config';
