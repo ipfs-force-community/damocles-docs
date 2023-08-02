@@ -5,14 +5,15 @@ module.exports = {
     markdown: {
         extendMarkdown: md => {
             md.use(require('markdown-it-replace-link'), {
+                processHTML: true, // defaults to false for backwards compatibility
                 replaceLink: function (link, env, token, htmlToken) {
-                    if (link === encodeURIComponent('./04.damocles-manager的配置解析.md')) {
+                    if (link === './04.damocles-manager%E7%9A%84%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90.md') {
                         return 'damocles-manager-config';
                     }
-                    if (link === encodeURIComponent('./03.damocles-worker的配置解析.md')) {
+                    if (link === './03.damocles-worker%E7%9A%84%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90.md')) {
                         return 'damocles-worker-config';
                     }
-                    if (link === encodeURIComponent('./15.damocles-worker_PC1_HugeTLB_Pages_支持.md#damocles-worker-pc1-hugetlb-pages-%E6%94%AF%E6%8C%81')) {
+                    if (link === './15.damocles-worker_PC1_HugeTLB_Pages_%E6%94%AF%E6%8C%81.md#damocles-worker-pc1-hugetlb-pages-%E6%94%AF%E6%8C%81') {
                         return 'hugeTLB';
                     }
                     if (link === 'https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/03.damocles-worker%E7%9A%84%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90.md#sealing') {
@@ -21,7 +22,7 @@ module.exports = {
                     if (link === './16.%E6%89%87%E5%8C%BA%E9%87%8D%E5%BB%BA%E7%9A%84%E6%94%AF%E6%8C%81.md') {
                         return 'sector-rebuild';
                     }
-                    if (link === encodeURIComponent('./15.damocles-worker_PC1_HugeTLB_Pages_支持.md')) {
+                    if (link === './15.damocles-worker_PC1_HugeTLB_Pages_%E6%94%AF%E6%8C%81.md') {
                         return 'hugeTLB';
                     }
                     if (link === './12.damocles-worker-util.md#hwinfo') {
