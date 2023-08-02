@@ -8,43 +8,43 @@ module.exports = {
                 processHTML: true, // defaults to false for backwards compatibility
                 replaceLink: function (link, env, token, htmlToken) {
                     // if (link == './04.damocles-manager的配置解析.md)') {
-                    if (link.localeCompare('./04.damocles-manager的配置解析.md')) {
+                    if (link === './04.damocles-manager的配置解析.md') {
                         return 'damocles-manager-config';
                     }
-                    else if (link.localeCompare('./03.damocles-worker的配置解析.md')) {
+                    else if (link === './03.damocles-worker的配置解析.md') {
                         return 'damocles-worker-config';
                     }
-                    else if (link.localeCompare('./15.damocles-worker_PC1_HugeTLB_Pages_支持.md#damocles-worker-pc1-hugetlb-pages-%E6%94%AF%E6%8C%81')) {
+                    else if (link === './15.damocles-worker_PC1_HugeTLB_Pages_支持.md#damocles-worker-pc1-hugetlb-pages-%E6%94%AF%E6%8C%81') {
                         return 'hugeTLB';
                     }
-                    else if (link.localeCompare('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/03.damocles-worker%E7%9A%84%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90.md#sealing')) {
+                    else if (link === 'https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/03.damocles-worker%E7%9A%84%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90.md#sealing') {
                         return '#sealing';
                     }
-                    else if (link.localeCompare('./16.%E6%89%87%E5%8C%BA%E9%87%8D%E5%BB%BA%E7%9A%84%E6%94%AF%E6%8C%81.md')) {
+                    else if (link === './16.%E6%89%87%E5%8C%BA%E9%87%8D%E5%BB%BA%E7%9A%84%E6%94%AF%E6%8C%81.md') {
                         return 'sector-rebuild';
                     }
-                    else if (link.localeCompare('./15.damocles-worker_PC1_HugeTLB_Pages_支持.md')) {
+                    else if (link === './15.damocles-worker_PC1_HugeTLB_Pages_支持.md') {
                         return 'hugeTLB';
                     }
-                    else if (link.localeCompare('./12.damocles-worker-util.md#hwinfo')) {
+                    else if (link === './12.damocles-worker-util.md#hwinfo') {
                         return 'worker-util';
                     }
-                    else if (link.localeCompare('../example/Example-1.md')) {
+                    else if (link === '../example/Example-1.md') {
                         return 'https://github.com/ipfs-force-community/damocles/blob/main/docs/example/Example-1.md';
                     }
-                    else if (link.localeCompare('../example/Example-2.md')) {
+                    else if (link === '../example/Example-2.md') {
                         return 'https://github.com/ipfs-force-community/damocles/blob/main/docs/example/Example-2.md';
                     }
-                    else if (link.localeCompare('../example/Example-3.md')) {
+                    else if (link === '../example/Example-3.md') {
                         return 'https://github.com/ipfs-force-community/damocles/blob/main/docs/example/Example-3.md';
                     }
-                    else if (link.localeCompare('../example/Example-4.md')) {
+                    else if (link === '../example/Example-4.md') {
                         return 'https://github.com/ipfs-force-community/damocles/blob/main/docs/example/Example-4.md';
                     }
-                    else if (link.localeCompare('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/04.damocles-manager%E7%9A%84%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90.md#commonpersiststores')) {
+                    else if (link === 'https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/04.damocles-manager%E7%9A%84%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90.md#commonpersiststores') {
                         return 'damocles-manager-config#commonpersiststores';
                     }
-                    else if (link.localeCompare('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/07.damocles-worker%E5%A4%96%E9%83%A8%E6%89%A7%E8%A1%8C%E5%99%A8%E7%9A%84%E9%85%8D%E7%BD%AE%E8%8C%83%E4%BE%8B.md')) {
+                    else if (link === 'https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/07.damocles-worker%E5%A4%96%E9%83%A8%E6%89%A7%E8%A1%8C%E5%99%A8%E7%9A%84%E9%85%8D%E7%BD%AE%E8%8C%83%E4%BE%8B.md') {
                         return 'processors-config-example';
                     }
                     return '1';
