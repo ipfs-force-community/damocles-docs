@@ -4,6 +4,7 @@ module.exports = {
     base: '/',
     markdown: {
         extendMarkdown: md => {
+            // why ci is not happy?
             md.use(require('markdown-it-replace-link'), {
                 processHTML: true, // defaults to false for backwards compatibility
                 replaceLink: function (link, env, token, htmlToken) {
