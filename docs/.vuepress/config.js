@@ -11,7 +11,7 @@ module.exports = {
                     if (link === './04.damocles-manager%E7%9A%84%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90.md') {
                         return 'damocles-manager-config';
                     }
-                    if (link === './03.damocles-worker%E7%9A%84%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90.md')) {
+                    if (link === './03.damocles-worker%E7%9A%84%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90.md') {
                         return 'damocles-worker-config';
                     }
                     if (link === './15.damocles-worker_PC1_HugeTLB_Pages_%E6%94%AF%E6%8C%81.md#damocles-worker-pc1-hugetlb-pages-%E6%94%AF%E6%8C%81') {
