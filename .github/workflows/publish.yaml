@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+
   schedule:
     - cron: '0 0 1/2 * *'
   workflow_dispatch:
@@ -22,6 +23,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install and Build 
         run: |
