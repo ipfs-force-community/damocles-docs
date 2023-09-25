@@ -8,6 +8,7 @@ const docsUrlMappings = {
         '10.damocles-worker-task-management.md': ['task-management.md', 'Task management'],
         '11.task-status-flow.md': ['task-flow.md', 'Task flow'],
         '09.poster-node.md': ['poster.md', 'Dedicated PoSt node'],
+        '08.snapdeal-support.md': ['snapup.md', 'Snapdeal support'],
         '12.damocles-worker-util.md': ['worker-util.md', 'Worker utils'],
         '06.migrate-sectors-to-damocles.md': ['migrate-sectors.md', 'Import existing sectors'],
     },
@@ -187,6 +188,7 @@ module.exports = {
                                 U('https://github.com/ipfs-force-community/damocles/blob/main/docs/en/10.damocles-worker-task-management.md'),
                                 U('https://github.com/ipfs-force-community/damocles/blob/main/docs/en/11.task-status-flow.md'),
                                 U('https://github.com/ipfs-force-community/damocles/blob/main/docs/en/09.poster-node.md'),
+                                U('https://github.com/ipfs-force-community/damocles/blob/main/docs/en/08.snapdeal-support.md'),
                                 U('https://github.com/ipfs-force-community/damocles/blob/main/docs/en/12.damocles-worker-util.md'),
                             ]
                         },
