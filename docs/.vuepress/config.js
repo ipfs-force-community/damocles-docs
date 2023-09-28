@@ -9,7 +9,7 @@ const docsUrlMappings = {
         '11.task-status-flow.md': ['task-flow.md', 'Task flow'],
         '09.poster-node.md': ['poster.md', 'Dedicated PoSt node'],
         '08.snapdeal-support.md': ['snapup.md', 'Snapdeal support'],
-        '12.damocles-worker-util.md': ['worker-util.md', 'Worker utils'],
+        '12.damocles-worker-config-guide.md': ['worker-config-guide.md', 'Worker config guide'],
         '06.migrate-sectors-to-damocles.md': ['migrate-sectors.md', 'Import existing sectors'],
     },
     'zh': {
@@ -21,7 +21,7 @@ const docsUrlMappings = {
         '11.%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%B5%81%E8%BD%AC.md': ['task-flow.md', '任务状态流转'],
         '09.%E7%8B%AC%E7%AB%8B%E8%BF%90%E8%A1%8C%E7%9A%84poster%E8%8A%82%E7%82%B9.md': ['poster.md', '独立 Poster'],
         '08.snapdeal%E7%9A%84%E6%94%AF%E6%8C%81.md': ['snapup.md', 'snapdeal 支持'],
-        '12.damocles-worker-util.md': ['worker-util.md', 'damocles-worker-util'],
+        '12.damocles-worker-%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8C%97.md': ['worker-config-guide.md', 'damocles-worker 配置指北'],
         '13.%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AE%97%E6%B3%95%E5%92%8C%E5%AD%98%E5%82%A8%E6%96%B9%E6%A1%88.md': ['custom-algo.md', '自定义算法/存储方案'],
         '14.damocles-manager%E7%9A%84mertics%E4%BD%BF%E7%94%A8.md': ['metrics.md', 'damocles-manager metrics 使用'],
         '15.damocles-worker_PC1_HugeTLB_Pages_%E6%94%AF%E6%8C%81.md': ['hugeTLB.md', 'PC1 hugeTLB 支持'],
@@ -189,7 +189,7 @@ module.exports = {
                                 U('https://github.com/ipfs-force-community/damocles/blob/main/docs/en/11.task-status-flow.md'),
                                 U('https://github.com/ipfs-force-community/damocles/blob/main/docs/en/09.poster-node.md'),
                                 U('https://github.com/ipfs-force-community/damocles/blob/main/docs/en/08.snapdeal-support.md'),
-                                U('https://github.com/ipfs-force-community/damocles/blob/main/docs/en/12.damocles-worker-util.md'),
+                                U('https://github.com/ipfs-force-community/damocles/blob/main/docs/en/12.damocles-worker-config-guide.md'),
                             ]
                         },
                         {
@@ -268,7 +268,7 @@ module.exports = {
                                 U('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/11.%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%B5%81%E8%BD%AC.md'),
                                 U('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/09.%E7%8B%AC%E7%AB%8B%E8%BF%90%E8%A1%8C%E7%9A%84poster%E8%8A%82%E7%82%B9.md'),
                                 U('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/08.snapdeal%E7%9A%84%E6%94%AF%E6%8C%81.md'),
-                                U('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/12.damocles-worker-util.md'),
+                                U('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/12.damocles-worker-%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8C%97.md'),
                                 U('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/13.%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AE%97%E6%B3%95%E5%92%8C%E5%AD%98%E5%82%A8%E6%96%B9%E6%A1%88.md'),
                                 U('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/14.damocles-manager%E7%9A%84mertics%E4%BD%BF%E7%94%A8.md'),
                                 U('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/15.damocles-worker_PC1_HugeTLB_Pages_%E6%94%AF%E6%8C%81.md'),
