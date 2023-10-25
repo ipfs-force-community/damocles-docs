@@ -17,7 +17,7 @@ const docsUrlMappings = {
         '04.damocles-manager%E7%9A%84%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90.md': ['damocles-manager-config.md', 'damocles-manager 配置'],
         '03.damocles-worker%E7%9A%84%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90.md': ['damocles-worker-config.md', 'damocles-worker 配置'],
         '07.damocles-worker%E5%A4%96%E9%83%A8%E6%89%A7%E8%A1%8C%E5%99%A8%E7%9A%84%E9%85%8D%E7%BD%AE%E8%8C%83%E4%BE%8B.md': ['processors-config-example.md', '外部执行器配置范例'],
-        '10.venus-worker%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86.md': ['task-management.md', 'worker 任务管理'],
+        '10.damocles-worker%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86.md': ['task-management.md', 'worker 任务管理'],
         '11.%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%B5%81%E8%BD%AC.md': ['task-flow.md', '任务状态流转'],
         '09.%E7%8B%AC%E7%AB%8B%E8%BF%90%E8%A1%8C%E7%9A%84poster%E8%8A%82%E7%82%B9.md': ['poster.md', '独立 Poster'],
         '08.snapdeal%E7%9A%84%E6%94%AF%E6%8C%81.md': ['snapup.md', 'snapdeal 支持'],
@@ -265,7 +265,7 @@ module.exports = {
                             title: '运维',
                             collapsable: false,
                             children: [
-                                U('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/10.venus-worker%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86.md'),
+                                U('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/10.damocles-worker%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86.md'),
                                 U('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/11.%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%B5%81%E8%BD%AC.md'),
                                 U('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/09.%E7%8B%AC%E7%AB%8B%E8%BF%90%E8%A1%8C%E7%9A%84poster%E8%8A%82%E7%82%B9.md'),
                                 U('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/08.snapdeal%E7%9A%84%E6%94%AF%E6%8C%81.md'),
@@ -299,7 +299,7 @@ module.exports = {
                             collapsable: false,
                             children: [
                                 ['', '简述'],
-                                U('https://github.com/ipfs-force-community/venus-cluster/blob/main/docs/zh/02.%E6%A6%82%E5%BF%B5%E5%92%8C%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD.md'),
+                                U('https://github.com/ipfs-force-community/Damocles/blob/main/docs/zh/02.%E6%A6%82%E5%BF%B5%E5%92%8C%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD.md'),
                             ]
                         },
                     ],
