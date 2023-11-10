@@ -31,6 +31,7 @@ const docsUrlMappings = {
         '17.%20damocles%E4%B8%8Elotus-miner%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B.md': ['migrate-miner.md', 'lotus-miner 与 damocles 切换流程'],
         'QA.md': ['faq.md', '常见问题'],
         '02.%E6%A6%82%E5%BF%B5%E5%92%8C%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD.md': ['concept.md', '概念和基础设施'],
+        '19.damocles-%E6%89%87%E5%8C%BA%E5%AD%98%E5%82%A8%E9%85%8D%E7%BD%AE.md': ['storage.md', 'damocles 扇区存储配置'],
     }
 }
 
@@ -259,6 +260,7 @@ module.exports = {
                                 U('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/04.damocles-manager%E7%9A%84%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90.md'),
                                 U('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/03.damocles-worker%E7%9A%84%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90.md'),
                                 U('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/07.damocles-worker%E5%A4%96%E9%83%A8%E6%89%A7%E8%A1%8C%E5%99%A8%E7%9A%84%E9%85%8D%E7%BD%AE%E8%8C%83%E4%BE%8B.md'),
+                                U('https://github.com/ipfs-force-community/damocles/blob/main/docs/zh/19.damocles-%E6%89%87%E5%8C%BA%E5%AD%98%E5%82%A8%E9%85%8D%E7%BD%AE.md#damocles-%E6%89%87%E5%8C%BA%E5%AD%98%E5%82%A8%E9%85%8D%E7%BD%AE'),
                             ]
                         },
                         {
